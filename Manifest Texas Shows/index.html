@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ============================================================
+     SEO — edit copy here
+     ============================================================ -->
+<title>Manifest Texas — Live Events Across Austin, Dallas, San Antonio &amp; Houston</title>
+<meta name="description" content="Manifest Texas produces bass-forward live events and artist bookings across Austin, Dallas, San Antonio, and Houston." />
+<link rel="canonical" href="https://www.manifesttexas.com/" />
+<meta name="theme-color" content="#050607" />
+
+<!-- OpenGraph / social. Replace og:url + og:image with live URLs after launch. -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Manifest Texas" />
+<meta property="og:title" content="Manifest Texas — Bass-Forward Live Events" />
+<meta property="og:description" content="Where sound, culture and energy collide." />
+<meta property="og:url" content="https://www.manifesttexas.com/" />
+<meta property="og:image" content="assets/img/og-manifest-texas.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Manifest Texas — Bass-Forward Live Events" />
+<meta name="twitter:description" content="Where sound, culture and energy collide." />
+<meta name="twitter:image" content="assets/img/og-manifest-texas.jpg" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/img/favicon-512.png" />
+
+<!-- Fonts: Fontshare (Cabinet Grotesk display / Switzer body) -->
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,500&f[]=switzer@400,500,600,700&display=swap" />
+<link rel="stylesheet" href="assets/styles.css" />
+
+<!-- ============================================================
+     STRUCTURED DATA — Organization + the three announced events.
+     Only facts printed on the official flyers are encoded here.
+     When a ticket URL exists, add:  "offers": { "@type": "Offer", "url": "https://..." }
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Manifest Texas",
+  "description": "Texas live-event promoter focused on bass-forward sound, visuals, and artist bookings.",
+  "areaServed": "Texas, United States",
+  "url": "https://www.manifesttexas.com/",
+  "logo": "assets/img/logo-manifest-texas.png",
+  "sameAs": ["https://www.instagram.com/"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicEvent",
+      "name": "Manifest Texas presents Getter",
+      "startDate": "2026-09-26T18:00:00-05:00",
+      "doorTime": "2026-09-26T17:30:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "organizer": { "@type": "Organization", "name": "Manifest Texas" },
+      "performer": [
+        { "@type": "MusicGroup", "name": "Getter" },
+        { "@type": "MusicGroup", "name": "Neotek" },
+        { "@type": "MusicGroup", "name": "Staysick" },
+        { "@type": "MusicGroup", "name": "Vndetta" },
+        { "@type": "MusicGroup", "name": "Zhonk" },
+        { "@type": "MusicGroup", "name": "Raddix" }
+      ],
+      "location": {
+        "@type": "MusicVenue",
+        "name": "The Far Out Lounge",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8504 S Congress Ave",
+          "addressLocality": "Austin",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        }
+      },
+      "image": "assets/img/flyer-getter-austin.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://link.dice.fm/E304e0345581",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Token — I'm Leaving Soon Tour (Dallas)",
+      "startDate": "2026-10-19T22:00:00-05:00",
+      "doorTime": "2026-10-19T22:00:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "organizer": { "@type": "Organization", "name": "Manifest Texas" },
+      "performer": { "@type": "MusicGroup", "name": "Token" },
+      "location": {
+        "@type": "MusicVenue",
+        "name": "Club Dada",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2720 Elm St",
+          "addressLocality": "Dallas",
+          "addressRegion": "TX",
+          "postalCode": "75226",
+          "addressCountry": "US"
+        }
+      },
+      "image": "assets/img/flyer-token-dallas.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://link.dice.fm/j30465cda630",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Token — I'm Leaving Soon Tour (Austin)",
+      "startDate": "2026-10-20T22:00:00-05:00",
+      "doorTime": "2026-10-20T22:00:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "organizer": { "@type": "Organization", "name": "Manifest Texas" },
+      "performer": { "@type": "MusicGroup", "name": "Token" },
+      "location": {
+        "@type": "MusicVenue",
+        "name": "Come & Take It Live",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2015 E Riverside Dr, Bldg. 4",
+          "addressLocality": "Austin",
+          "addressRegion": "TX",
+          "postalCode": "78741",
+          "addressCountry": "US"
+        }
+      },
+      "image": "assets/img/flyer-token-austin.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://link.dice.fm/Jeaab962a720",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#upcoming">Skip to upcoming shows</a>
+
+<!-- ============================================================
+     HEADER / STICKY NAV
+     ============================================================ -->
+<header class="site-header" id="top">
+  <div class="shell header-inner">
+    <a class="brand" href="#top" aria-label="Manifest Texas — home">
+      <span class="brand-plate">
+        <img src="assets/img/logo-manifest-texas-sm.png" width="400" height="150"
+             alt="Manifest Texas" class="brand-logo" />
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="#upcoming">Upcoming</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#past">Past Shows</a>
+      <a href="#about">About</a>
+      <a href="#submissions">Submissions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light mode"></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle
+              aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="menu-bars" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#upcoming">Upcoming Shows</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#past">Past Shows</a>
+      <a href="#about">About</a>
+      <a href="#submissions">Artist Submissions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-sheen" aria-hidden="true"></div>
+    <div class="hero-scan" aria-hidden="true"></div>
+    <div class="shell hero-inner">
+      <img src="assets/img/logo-manifest-texas.png" width="1200" height="450"
+           alt="Manifest Texas" class="hero-logo reveal" fetchpriority="high" />
+
+      <h1 id="hero-title" class="hero-title reveal">
+        Where sound, culture and energy collide.
+      </h1>
+
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#upcoming">See upcoming shows</a>
+        <a class="btn btn-ghost" href="#submissions">Artist submissions</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       UPCOMING SHOWS — featured + two supporting cards.
+       Flyer art lives in /assets/img/ (regenerate with tools/build-assets.py).
+       ============================================================ -->
+  <section class="section" id="upcoming" aria-labelledby="upcoming-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 id="upcoming-title" class="section-title">Upcoming Shows</h2>
+        <p class="section-note">On sale and announced. Ticket links are added per show below.</p>
+      </div>
+
+      <!-- FEATURED SHOW ------------------------------------------------- -->
+      <article class="show-featured">
+        <figure class="flyer flyer-featured">
+          <picture>
+            <source srcset="assets/img/flyer-getter-austin.webp" type="image/webp" />
+            <img src="assets/img/flyer-getter-austin.jpg" width="1100" height="1375" loading="eager"
+                 alt="Manifest Texas presents Getter with Neotek, Staysick, Vndetta, Zhonk and Raddix — September 26, 2026 at The Far Out Lounge, Austin, Texas." />
+          </picture>
+          <figcaption class="flyer-tag">Headline show</figcaption>
+        </figure>
+
+        <div class="show-body">
+          <p class="eyebrow">Sat · Sept 26, 2026</p>
+          <h3 class="show-title">Getter</h3>
+          <p class="show-support">with Neotek · Staysick · Vndetta · Zhonk · Raddix</p>
+
+          <dl class="show-meta">
+            <div><dt>Venue</dt><dd>The Far Out Lounge</dd></div>
+            <div><dt>City</dt><dd>8504 S Congress Ave, Austin, TX</dd></div>
+            <div><dt>Doors</dt><dd>5:30 PM · Event 6:00 PM</dd></div>
+            <div><dt>Status</dt><dd><span class="status status-on">Announced</span></dd></div>
+          </dl>
+
+          <p class="show-powered">Powered by HSD Sound Systems &amp; Subculture Audio</p>
+
+          <div class="show-actions">
+            <a class="btn btn-primary" href="https://link.dice.fm/E304e0345581" target="_blank" rel="noopener noreferrer">
+              Tickets
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SUPPORTING SHOWS ---------------------------------------------- -->
+      <div class="show-grid">
+        <article class="show-card">
+          <figure class="flyer">
+            <picture>
+              <source srcset="assets/img/flyer-token-dallas.webp" type="image/webp" />
+              <img src="assets/img/flyer-token-dallas.jpg" width="1100" height="1699" loading="lazy"
+                   alt="Token, I'm Leaving Soon Tour — Club Dada, 2720 Elm St, Dallas, Texas. Doors 10 PM, 10.19.26. Presented by Manifest Texas." />
+            </picture>
+          </figure>
+          <div class="show-body">
+            <p class="eyebrow">Mon · Oct 19, 2026</p>
+            <h3 class="show-title show-title-sm">Token</h3>
+            <p class="show-support">I'm Leaving Soon Tour</p>
+            <dl class="show-meta show-meta-tight">
+              <div><dt>Venue</dt><dd>Club Dada</dd></div>
+              <div><dt>City</dt><dd>2720 Elm St, Dallas, TX</dd></div>
+              <div><dt>Doors</dt><dd>10:00 PM</dd></div>
+              <div><dt>Status</dt><dd><span class="status status-on">Announced</span></dd></div>
+            </dl>
+            <div class="show-actions">
+              <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card">
+          <figure class="flyer">
+            <picture>
+              <source srcset="assets/img/flyer-token-austin.webp" type="image/webp" />
+              <img src="assets/img/flyer-token-austin.jpg" width="1100" height="1699" loading="lazy"
+                   alt="Token, I'm Leaving Soon Tour — Come &amp; Take It Live, 2015 E Riverside Dr, Austin, Texas. Doors 10 PM, 10.20.26. Presented by Manifest Texas." />
+            </picture>
+          </figure>
+          <div class="show-body">
+            <p class="eyebrow">Tue · Oct 20, 2026</p>
+            <h3 class="show-title show-title-sm">Token</h3>
+            <p class="show-support">I'm Leaving Soon Tour</p>
+            <dl class="show-meta show-meta-tight">
+              <div><dt>Venue</dt><dd>Come &amp; Take It Live</dd></div>
+              <div><dt>City</dt><dd>2015 E Riverside Dr, Austin, TX</dd></div>
+              <div><dt>Doors</dt><dd>10:00 PM</dd></div>
+              <div><dt>Status</dt><dd><span class="status status-on">Announced</span></dd></div>
+            </dl>
+            <div class="show-actions">
+              <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TICKETS — one repeatable row and one ticket link per show.
+       Duplicate a whole <div class="link-row"> block to add a new show.
+       ============================================================ -->
+  <section class="section section-alt" id="tickets" aria-labelledby="tickets-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 id="tickets-title" class="section-title">Tickets</h2>
+        <p class="section-note">Every announced show, one direct ticket link.</p>
+      </div>
+
+      <div class="link-rows">
+
+        <!-- ROW 1 — Getter, Austin -->
+        <div class="link-row">
+          <div class="link-row-date"><span class="lr-mon">Sep</span><span class="lr-day">26</span><span class="lr-yr">2026</span></div>
+          <div class="link-row-main">
+            <h3 class="link-row-title">Getter</h3>
+            <p class="link-row-sub">The Far Out Lounge · Austin, TX · Doors 5:30 PM</p>
+          </div>
+          <div class="link-row-actions">
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/E304e0345581" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </div>
+        </div>
+
+        <!-- ROW 2 — Token, Dallas -->
+        <div class="link-row">
+          <div class="link-row-date"><span class="lr-mon">Oct</span><span class="lr-day">19</span><span class="lr-yr">2026</span></div>
+          <div class="link-row-main">
+            <h3 class="link-row-title">Token — I'm Leaving Soon Tour</h3>
+            <p class="link-row-sub">Club Dada · Dallas, TX · Doors 10:00 PM</p>
+          </div>
+          <div class="link-row-actions">
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </div>
+        </div>
+
+        <!-- ROW 3 — Token, Austin -->
+        <div class="link-row">
+          <div class="link-row-date"><span class="lr-mon">Oct</span><span class="lr-day">20</span><span class="lr-yr">2026</span></div>
+          <div class="link-row-main">
+            <h3 class="link-row-title">Token — I'm Leaving Soon Tour</h3>
+            <p class="link-row-sub">Come &amp; Take It Live · Austin, TX · Doors 10:00 PM</p>
+          </div>
+          <div class="link-row-actions">
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </div>
+        </div>
+
+        <!-- COPY THIS BLOCK FOR A NEW SHOW ----------------------------------
+        <div class="link-row">
+          <div class="link-row-date"><span class="lr-mon">Nov</span><span class="lr-day">07</span><span class="lr-yr">2026</span></div>
+          <div class="link-row-main">
+            <h3 class="link-row-title">ARTIST NAME</h3>
+            <p class="link-row-sub">VENUE · CITY, TX · Doors 0:00 PM</p>
+          </div>
+          <div class="link-row-actions">
+            <a class="btn btn-primary btn-sm" href="https://REAL-TICKET-URL">Tickets</a>
+          </div>
+        </div>
+        ------------------------------------------------------------------- -->
+
+      </div>
+
+      <p class="link-note">
+        Need a link added or corrected? Email
+        <a href="mailto:anthonyjones@manifesttexas.com">anthonyjones@manifesttexas.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAST SHOWS / ARCHIVE
+       Add a past show by copying an <li class="archive-card"> block.
+       ============================================================ -->
+  <section class="section" id="past" aria-labelledby="past-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 id="past-title" class="section-title">Past Shows</h2>
+        <p class="section-note">Rooms we run, and the crews we run them with.</p>
+      </div>
+
+      <ul class="archive-grid">
+        <li class="archive-card">
+          <p class="archive-city">Austin, TX</p>
+          <h3 class="archive-venue">The Far Out Lounge</h3>
+          <p class="archive-note">Outdoor stage, deep South Congress. Full-range rig, long throw.</p>
+        </li>
+        <li class="archive-card">
+          <p class="archive-city">Dallas, TX</p>
+          <h3 class="archive-venue">Club Dada</h3>
+          <p class="archive-note">Deep Ellum mainstay. Tight room, high pressure, no dead corners.</p>
+        </li>
+        <li class="archive-card">
+          <p class="archive-city">Austin, TX</p>
+          <h3 class="archive-venue">Come &amp; Take It Live</h3>
+          <p class="archive-note">East Riverside. Built for volume and a front-to-back crowd.</p>
+        </li>
+        <li class="archive-card archive-card-alt">
+          <p class="archive-city">Production partners</p>
+          <h3 class="archive-venue">HSD Sound Systems</h3>
+          <p class="archive-note">Subs and tuning for headline nights.</p>
+        </li>
+        <li class="archive-card archive-card-alt">
+          <p class="archive-city">Production partners</p>
+          <h3 class="archive-venue">Subculture Audio</h3>
+          <p class="archive-note">Low-end reinforcement, Texas-built.</p>
+        </li>
+        <li class="archive-card archive-card-alt">
+          <p class="archive-city">Production partners</p>
+          <h3 class="archive-venue">JT Creative</h3>
+          <p class="archive-note">Creative direction and visual production.</p>
+        </li>
+        <li class="archive-card archive-card-quiet">
+          <p class="archive-city">Archive</p>
+          <h3 class="archive-venue">Recaps posted after each run</h3>
+          <p class="archive-note">Photos, sets, and room notes land here once a show wraps.</p>
+        </li>
+      </ul>
+
+      <!-- PAST SHOW TEMPLATE — copy inside <ul class="archive-grid">
+      <li class="archive-card">
+        <p class="archive-city">CITY, TX · MONTH YEAR</p>
+        <h3 class="archive-venue">ARTIST — VENUE</h3>
+        <p class="archive-note">One line: turnout, rig, or moment worth remembering.</p>
+      </li>
+      -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT + CONTACT
+       ============================================================ -->
+  <section class="section section-alt" id="about" aria-labelledby="about-title">
+    <div class="shell about-grid">
+      <div>
+        <h2 id="about-title" class="section-title">About Manifest Texas</h2>
+        <p class="prose">
+          Creating unforgettable moments across Texas. Manifesting bold, original talent from every genre.
+        </p>
+      </div>
+      <ul class="about-stats">
+        <li><span class="stat-k">Cities</span><span class="stat-v">Austin · Dallas · San Antonio · Houston</span></li>
+        <li><span class="stat-k">Focus</span><span class="stat-v">Discovering standout talent and building collaborations that move artists forward. We partner with emerging and established musicians, record labels, and agencies to grow their presence across Texas. <a href="mailto:anthonyjones@manifesttexas.com?subject=Texas%20Promotion%20Collaboration">Email us</a> and let’s build momentum.</span></li>
+        <li><span class="stat-k">Production</span><span class="stat-v"><a href="mailto:anthonyjones@manifesttexas.com?subject=Production%20Inquiry">Email us</a> and we’ll link you with teams we trust.</span></li>
+        <li><span class="stat-k">Bookings</span><span class="stat-v">Touring + Texas local</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ARTIST SUBMISSIONS
+       Swap the mailto for a form URL (Google Form, Typeform, Squarespace
+       form page) by replacing BOTH hrefs marked SUBMISSION LINK.
+       ============================================================ -->
+  <section class="section" id="submissions" aria-labelledby="sub-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 id="sub-title" class="section-title">Artist Submissions</h2>
+        <p class="section-note">Focused on unique and creative concepts we believe in.</p>
+      </div>
+
+      <div class="sub-cta">
+        <!-- SUBMISSION LINK -->
+        <a class="btn btn-primary" href="mailto:submissions@manifesttexas.com?subject=Artist%20Submission%20%E2%80%94%20%5BArtist%20Name%5D&amp;body=Artist%3A%0ACity%3A%0AMusic%20link%3A%0ALive%20clip%3A%0ATexas%20draw%3A%0AAvailable%20dates%3A%0A">
+          Submit your music
+        </a>
+        <p class="sub-note">
+          Prefer a form? Point this button at your form URL — see README, “Artist submissions”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT — swap addresses and social handles here
+       ============================================================ -->
+  <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <p class="section-note">Direct lines. We answer the ones that are specific.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Booking</h3>
+          <p>Offers, holds, and routing.</p>
+          <a href="mailto:anthonyjones@manifesttexas.com?subject=Booking%20Inquiry">anthonyjones@manifesttexas.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>Partnerships</h3>
+          <p>Brands, sponsors, and production partners.</p>
+          <a href="mailto:anthonyjones@manifesttexas.com?subject=Partnership%20Inquiry">anthonyjones@manifesttexas.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>Venues</h3>
+          <p>We’re here to co-promote with our community.</p>
+          <a href="mailto:anthonyjones@manifesttexas.com?subject=Venue%20Inquiry">Email us</a>
+        </div>
+        <div class="contact-card">
+          <h3>Social</h3>
+          <p>Announcements land here first.</p>
+          <a href="https://www.instagram.com/manifesttexas?igsh=ZHBweXB6Y2dhZ3Qz&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <img src="assets/img/logo-manifest-texas-sm.png" width="400" height="150" alt="Manifest Texas" class="footer-logo" />
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#upcoming">Upcoming</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#past">Past Shows</a>
+      <a href="#about">About</a>
+      <a href="#submissions">Submissions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-legal">© <span data-year>2026</span> Manifest Texas · Austin · Dallas · San Antonio · Houston</p>
+  </div>
+</footer>
+
+<!-- Toast used by links that do not have a URL yet -->
+<div class="toast" data-toast role="status" aria-live="polite" hidden></div>
+
+<script src="assets/main.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
