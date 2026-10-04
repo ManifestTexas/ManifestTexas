@@ -1,0 +1,30 @@
+name: Unzip site
+on:
+  push:
+    paths:
+      - '**.zip'
+      - '.github/workflows/unzip-site.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack zip into the repo
+        run: |
+          set -e
+          ZIP="$(find . -maxdepth 1 -name '*.zip' | head -n1)"
+          if [ -z "$ZIP" ]; then echo "No zip found"; exit 0; fi
+          rm -rf /tmp/site && unzip -oq "$ZIP" -d /tmp/site
+          SRC=/tmp/site
+          if [ -f /tmp/site/manifest-texas-vercel/index.html ]; then SRC=/tmp/site/manifest-texas-vercel; fi
+          cp -R "$SRC"/. .
+          rm -rf __MACOSX
+          git rm -q "$ZIP"
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Unpack site from zip" || echo "Nothing to commit"
+          git push
