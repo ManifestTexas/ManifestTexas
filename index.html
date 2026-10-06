@@ -16,14 +16,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Manifest Texas" />
 <meta property="og:title" content="Manifest Texas — Live Events Across Texas" />
-<meta property="og:description" content="Where sound, culture and energy collide." />
+<meta property="og:description" content="Where sound, culture, and energy collide." />
 <meta property="og:url" content="https://www.manifesttexas.com/" />
 <meta property="og:image" content="https://www.manifesttexas.com/assets/img/og-manifest-texas.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Manifest Texas — Live Events Across Texas" />
-<meta name="twitter:description" content="Where sound, culture and energy collide." />
+<meta name="twitter:description" content="Where sound, culture, and energy collide." />
 <meta name="twitter:image" content="https://www.manifesttexas.com/assets/img/og-manifest-texas.jpg" />
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="assets/styles.css" />
 
 <!-- ============================================================
-     STRUCTURED DATA — Organization + the three announced events.
+     STRUCTURED DATA — Organization + announced events (past and upcoming).
      Only facts printed on the official flyers are encoded here.
      When a ticket URL exists, add:  "offers": { "@type": "Offer", "url": "https://..." }
      ============================================================ -->
@@ -145,6 +145,38 @@
         "url": "https://link.dice.fm/Jeaab962a720",
         "availability": "https://schema.org/InStock"
       }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "Do Not Resurrect (Dallas)",
+      "startDate": "2026-11-01",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "organizer": { "@type": "Organization", "name": "Manifest Texas" },
+      "performer": [
+        { "@type": "MusicGroup", "name": "870glizzy" },
+        { "@type": "MusicGroup", "name": "pranav.wav" },
+        { "@type": "MusicGroup", "name": "mercykill" },
+        { "@type": "MusicGroup", "name": "unordinarybeats" }
+      ],
+      "location": {
+        "@type": "MusicVenue",
+        "name": "Club Dada",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2720 Elm St",
+          "addressLocality": "Dallas",
+          "addressRegion": "TX",
+          "postalCode": "75226",
+          "addressCountry": "US"
+        }
+      },
+      "image": "assets/img/flyer-dnr.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://link.dice.fm/ke7046bc9ee0",
+        "availability": "https://schema.org/InStock"
+      }
     }
   ]
 }
@@ -168,10 +200,11 @@
 
     <nav class="nav-desktop" aria-label="Primary">
       <a href="#upcoming">Upcoming</a>
+      <a href="#videos">Videos</a>
       <a href="#tickets">Tickets</a>
+      <a href="#past">Past Shows</a>
       <a href="#production">Production</a>
       <a href="#about">About</a>
-      <a href="#focus">Focus</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -188,7 +221,9 @@
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
       <a href="#upcoming">Upcoming Shows</a>
+      <a href="#videos">Promo Videos</a>
       <a href="#tickets">Tickets</a>
+      <a href="#past">Past Shows</a>
       <a href="#production">Production</a>
       <a href="#about">About</a>
       <a href="#focus">Focus</a>
@@ -209,7 +244,7 @@
            alt="Manifest Texas" class="hero-logo reveal" fetchpriority="high" />
 
       <h1 id="hero-title" class="hero-title reveal">
-        Where sound, culture and energy collide.
+        Where sound, culture, and energy collide.
       </h1>
 
       <div class="hero-cta reveal">
@@ -221,78 +256,74 @@
   </section>
 
   <!-- ============================================================
-       UPCOMING SHOWS — featured + two supporting cards.
-       Flyer art lives in /assets/img/ (regenerate with tools/build-assets.py).
+       UPCOMING SHOWS — one <article class="show-card"> per date.
+       When a show has passed, move its card into PAST SHOWS below.
        ============================================================ -->
   <section class="section" id="upcoming" aria-labelledby="upcoming-title">
     <div class="shell">
       <div class="section-head">
         <h2 id="upcoming-title" class="section-title">Upcoming Shows</h2>
-        <p class="section-note">Manifesting Texas. Austin · Dallas · San Antonio · Houston.</p>
+        <p class="section-note">Manifesting Texas: Austin · Dallas · San Antonio · Houston.</p>
       </div>
 
-      <!-- FEATURED SHOW ------------------------------------------------- -->
-      <article class="show-featured">
-        <figure class="flyer flyer-featured">
-          <picture>
-            <source srcset="assets/img/flyer-getter-austin.webp" type="image/webp" />
-            <img src="assets/img/flyer-getter-austin.jpg" width="1100" height="1375" loading="eager"
-                 alt="Manifest Texas presents Getter with Neotek, Staysick, Vndetta, Zhonk and Raddix — September 26, 2026 at The Far Out Lounge, Austin, Texas." />
-          </picture>
-          <figcaption class="flyer-tag">Headline show</figcaption>
-        </figure>
-
-        <div class="show-body">
-          <p class="eyebrow">Sat · Sept 26, 2026</p>
-          <h3 class="show-title">Getter</h3>
-          <p class="show-support">with Neotek · Staysick · Vndetta · Zhonk · Raddix</p>
-
-          <p class="show-support">Austin, Texas</p>
-
-          <div class="show-actions">
-            <a class="btn btn-primary" href="https://link.dice.fm/E304e0345581" target="_blank" rel="noopener noreferrer">
-              Tickets
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- SUPPORTING SHOWS ---------------------------------------------- -->
-      <div class="show-grid">
+      <div class="show-grid show-grid-upcoming">
+        <!-- Token — Dallas -->
         <article class="show-card">
           <figure class="flyer">
             <picture>
               <source srcset="assets/img/flyer-token-dallas.webp" type="image/webp" />
               <img src="assets/img/flyer-token-dallas.jpg" width="1100" height="1699" loading="lazy"
-                   alt="Token, I'm Leaving Soon Tour — Club Dada, 2720 Elm St, Dallas, Texas. Doors 10 PM, 10.19.26. Presented by Manifest Texas." />
+                   alt="Token, I’m Leaving Soon Tour — Club Dada, 2720 Elm St, Dallas, Texas. Doors 10 PM, 10.19.26. Presented by Manifest Texas." />
             </picture>
+            <figcaption class="flyer-tag">Next up</figcaption>
           </figure>
           <div class="show-body">
             <p class="eyebrow">Mon · Oct 19, 2026</p>
             <h3 class="show-title show-title-sm">Token</h3>
-            <p class="show-support">I'm Leaving Soon Tour</p>
-            <p class="show-support">Dallas, Texas</p>
+            <p class="show-support">I’m Leaving Soon Tour, with Clark D</p>
+            <p class="show-support">Club Dada · Dallas, Texas</p>
             <div class="show-actions">
               <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
             </div>
           </div>
         </article>
 
+        <!-- Token — Austin -->
         <article class="show-card">
           <figure class="flyer">
             <picture>
               <source srcset="assets/img/flyer-token-austin.webp" type="image/webp" />
               <img src="assets/img/flyer-token-austin.jpg" width="1100" height="1699" loading="lazy"
-                   alt="Token, I'm Leaving Soon Tour — Come &amp; Take It Live, 2015 E Riverside Dr, Austin, Texas. Doors 10 PM, 10.20.26. Presented by Manifest Texas." />
+                   alt="Token, I’m Leaving Soon Tour — Come &amp; Take It Live, 2015 E Riverside Dr, Austin, Texas. Doors 10 PM, 10.20.26. Presented by Manifest Texas." />
             </picture>
           </figure>
           <div class="show-body">
             <p class="eyebrow">Tue · Oct 20, 2026</p>
             <h3 class="show-title show-title-sm">Token</h3>
-            <p class="show-support">I'm Leaving Soon Tour</p>
-            <p class="show-support">Austin, Texas</p>
+            <p class="show-support">I’m Leaving Soon Tour, with Clark D</p>
+            <p class="show-support">Come &amp; Take It Live · Austin, Texas</p>
             <div class="show-actions">
               <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Do Not Resurrect — Dallas -->
+        <article class="show-card">
+          <figure class="flyer">
+            <picture>
+              <source srcset="assets/img/flyer-dnr.webp" type="image/webp" />
+              <img src="assets/img/flyer-dnr.jpg" width="1100" height="1100" loading="lazy"
+                   alt="Do Not Resurrect with 870glizzy, pranav.wav and mercykill, sounds by unordinarybeats — Dallas 11/1 at Club Dada (late), Houston 11/7 at Bad Astronaut." />
+            </picture>
+          </figure>
+          <div class="show-body">
+            <p class="eyebrow">Sun · Nov 1, 2026 · Late show</p>
+            <h3 class="show-title show-title-sm">Do Not Resurrect</h3>
+            <p class="show-support">870glizzy · pranav.wav · mercykill<br />Sounds by unordinarybeats</p>
+            <p class="show-support">Club Dada · Dallas, Texas</p>
+            <div class="show-actions">
+              <a class="btn btn-primary btn-sm" href="https://link.dice.fm/ke7046bc9ee0" target="_blank" rel="noopener noreferrer">Tickets</a>
             </div>
           </div>
         </article>
@@ -301,51 +332,103 @@
   </section>
 
   <!-- ============================================================
-       TICKETS — one repeatable row and one ticket link per show.
+       PROMO VIDEOS — vertical 9:16 clips in /assets/video/.
+       To add one, copy a <figure class="promo"> block.
+       ============================================================ -->
+  <section class="section section-promo" id="videos" aria-labelledby="videos-title">
+    <div class="promo-glow" aria-hidden="true"></div>
+    <div class="shell promo-layout">
+      <div class="promo-intro">
+        <p class="eyebrow">Promo videos</p>
+        <h2 id="videos-title" class="section-title promo-title">Token: I’m Leaving Soon Tour</h2>
+        <p class="section-note">Two Texas nights with Token and Clark D. Press play, then grab your tickets before they’re gone.</p>
+        <ul class="promo-dates">
+          <li><span class="pd-date">Oct 19</span><span class="pd-city">Dallas · Club Dada</span></li>
+          <li><span class="pd-date">Oct 20</span><span class="pd-city">Austin · Come &amp; Take It Live</span></li>
+        </ul>
+      </div>
+
+      <div class="promo-grid">
+        <figure class="promo">
+          <div class="promo-frame">
+            <video class="promo-video" preload="none" playsinline controls
+                   poster="assets/img/token-dallas-promo-poster.jpg"
+                   aria-label="Token, I’m Leaving Soon Tour — Dallas promo video">
+              <source src="assets/video/token-dallas-promo.mp4" type="video/mp4" />
+            </video>
+            <button class="promo-play" type="button" aria-label="Play Dallas promo video">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <figcaption class="promo-cap">
+            <span><strong>Dallas</strong> · Mon, Oct 19</span>
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </figcaption>
+        </figure>
+
+        <figure class="promo">
+          <div class="promo-frame">
+            <video class="promo-video" preload="none" playsinline controls
+                   poster="assets/img/token-austin-promo-poster.jpg"
+                   aria-label="Token, I’m Leaving Soon Tour — Austin promo video">
+              <source src="assets/video/token-austin-promo.mp4" type="video/mp4" />
+            </video>
+            <button class="promo-play" type="button" aria-label="Play Austin promo video">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <figcaption class="promo-cap">
+            <span><strong>Austin</strong> · Tue, Oct 20</span>
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TICKETS — one row and one ticket link per upcoming show.
        Duplicate a whole <div class="link-row"> block to add a new show.
        ============================================================ -->
   <section class="section section-alt" id="tickets" aria-labelledby="tickets-title">
     <div class="shell">
       <div class="section-head">
         <h2 id="tickets-title" class="section-title">Tickets</h2>
-        <p class="section-note">Every announced show, one direct ticket link.</p>
+        <p class="section-note">Every upcoming show, with one direct ticket link.</p>
       </div>
 
       <div class="link-rows">
 
-        <!-- ROW 1 — Getter, Austin -->
-        <div class="link-row">
-          <div class="link-row-date"><span class="lr-mon">Sep</span><span class="lr-day">26</span><span class="lr-yr">2026</span></div>
-          <div class="link-row-main">
-            <h3 class="link-row-title">Getter</h3>
-            <p class="link-row-sub">Austin, Texas</p>
-          </div>
-          <div class="link-row-actions">
-            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/E304e0345581" target="_blank" rel="noopener noreferrer">Tickets</a>
-          </div>
-        </div>
-
-        <!-- ROW 2 — Token, Dallas -->
         <div class="link-row">
           <div class="link-row-date"><span class="lr-mon">Oct</span><span class="lr-day">19</span><span class="lr-yr">2026</span></div>
           <div class="link-row-main">
-            <h3 class="link-row-title">Token — I'm Leaving Soon Tour</h3>
-            <p class="link-row-sub">Dallas, Texas</p>
+            <h3 class="link-row-title">Token: I’m Leaving Soon Tour</h3>
+            <p class="link-row-sub">with Clark D · Club Dada · Dallas, Texas · Doors 10 PM</p>
           </div>
           <div class="link-row-actions">
             <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
           </div>
         </div>
 
-        <!-- ROW 3 — Token, Austin -->
         <div class="link-row">
           <div class="link-row-date"><span class="lr-mon">Oct</span><span class="lr-day">20</span><span class="lr-yr">2026</span></div>
           <div class="link-row-main">
-            <h3 class="link-row-title">Token — I'm Leaving Soon Tour</h3>
-            <p class="link-row-sub">Austin, Texas</p>
+            <h3 class="link-row-title">Token: I’m Leaving Soon Tour</h3>
+            <p class="link-row-sub">with Clark D · Come &amp; Take It Live · Austin, Texas · Doors 10 PM</p>
           </div>
           <div class="link-row-actions">
             <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </div>
+        </div>
+
+        <div class="link-row">
+          <div class="link-row-date"><span class="lr-mon">Nov</span><span class="lr-day">01</span><span class="lr-yr">2026</span></div>
+          <div class="link-row-main">
+            <h3 class="link-row-title">Do Not Resurrect</h3>
+            <p class="link-row-sub">870glizzy · pranav.wav · mercykill · Club Dada · Dallas, Texas · Late show</p>
+          </div>
+          <div class="link-row-actions">
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/ke7046bc9ee0" target="_blank" rel="noopener noreferrer">Tickets</a>
           </div>
         </div>
 
@@ -354,10 +437,10 @@
           <div class="link-row-date"><span class="lr-mon">Nov</span><span class="lr-day">07</span><span class="lr-yr">2026</span></div>
           <div class="link-row-main">
             <h3 class="link-row-title">ARTIST NAME</h3>
-            <p class="link-row-sub">VENUE · CITY, TX · Doors 0:00 PM</p>
+            <p class="link-row-sub">VENUE · CITY, Texas · Doors 0:00 PM</p>
           </div>
           <div class="link-row-actions">
-            <a class="btn btn-primary btn-sm" href="https://REAL-TICKET-URL">Tickets</a>
+            <a class="btn btn-primary btn-sm" href="https://REAL-TICKET-URL" target="_blank" rel="noopener noreferrer">Tickets</a>
           </div>
         </div>
         ------------------------------------------------------------------- -->
@@ -372,30 +455,79 @@
   </section>
 
   <!-- ============================================================
+       PAST SHOWS — newest first. Move a card here after the show date.
+       ============================================================ -->
+  <section class="section" id="past" aria-labelledby="past-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 id="past-title" class="section-title">Past Shows</h2>
+        <p class="section-note">Nights we’ve brought to life across Texas.</p>
+      </div>
+
+      <!-- RECAP VIDEOS — 16:9 clips in /assets/video/. Copy a <figure class="promo recap"> block to add one. -->
+      <div class="recap-block">
+        <h3 class="recap-heading">Recap Videos</h3>
+        <div class="recap-grid">
+          <figure class="promo recap">
+            <div class="promo-frame recap-frame">
+              <video class="promo-video" preload="none" playsinline controls
+                     poster="assets/img/getter-austin-recap-poster.jpg"
+                     aria-label="Getter recap video — The Far Out Lounge, Austin, September 26, 2026">
+                <source src="assets/video/getter-austin-recap.mp4" type="video/mp4" />
+              </video>
+              <button class="promo-play" type="button" aria-label="Play Getter recap video">
+                <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+              </button>
+            </div>
+            <figcaption class="promo-cap recap-cap">
+              <span><strong>Getter</strong> · “Forget It” · The Far Out Lounge, Austin · Sept 26, 2026</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h3 class="recap-heading">Show Archive</h3>
+
+      <ul class="past-grid">
+        <li class="past-card">
+          <figure class="flyer past-flyer">
+            <picture>
+              <source srcset="assets/img/flyer-getter-austin-thumb.webp" type="image/webp" />
+              <img src="assets/img/flyer-getter-austin-thumb.jpg" width="600" height="750" loading="lazy"
+                   alt="Manifest Texas presents Getter with Neotek, Staysick, Vndetta, Zhonk, and Raddix — September 26, 2026, at The Far Out Lounge, Austin, Texas." />
+            </picture>
+          </figure>
+          <div class="past-body">
+            <p class="past-date">Sat · Sept 26, 2026</p>
+            <h3 class="past-title">Getter</h3>
+            <p class="past-sub">with Neotek · Staysick · Vndetta · Zhonk · Raddix</p>
+            <p class="past-sub">The Far Out Lounge · Austin, Texas</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
        PRODUCTION PARTNERS
        ============================================================ -->
-  <section class="section" id="production" aria-labelledby="production-title">
+  <section class="section section-alt" id="production" aria-labelledby="production-title">
     <div class="shell">
       <div class="section-head">
         <h2 id="production-title" class="section-title">Production Partners</h2>
-        <p class="section-note">Need production support? Email us and we’ll connect you with teams we trust.</p>
+        <p class="section-note">Need production support? Email us, and we’ll connect you with teams we trust.</p>
       </div>
 
-      <ul class="archive-grid">
+      <ul class="archive-grid archive-grid-2">
         <li class="archive-card archive-card-alt">
-          <p class="archive-city">Production partners</p>
+          <p class="archive-city">Sound</p>
           <h3 class="archive-venue">HSD Sound Systems</h3>
           <p class="archive-note">Subs and tuning for headline nights.</p>
         </li>
         <li class="archive-card archive-card-alt">
-          <p class="archive-city">Production partners</p>
+          <p class="archive-city">Sound</p>
           <h3 class="archive-venue">Subculture Audio</h3>
-          <p class="archive-note">Low-end reinforcement, Texas-built.</p>
-        </li>
-        <li class="archive-card archive-card-alt">
-          <p class="archive-city">Production partners</p>
-          <h3 class="archive-venue">JT Creative</h3>
-          <p class="archive-note">Creative direction and visual production.</p>
+          <p class="archive-note">Texas-built low-end reinforcement.</p>
         </li>
       </ul>
       <p class="link-note"><a href="mailto:anthonyjones@manifesttexas.com?subject=Production%20Support">Email us about production support</a></p>
@@ -403,21 +535,21 @@
   </section>
 
   <!-- ============================================================
-       ABOUT + CONTACT
+       ABOUT
        ============================================================ -->
-  <section class="section section-alt" id="about" aria-labelledby="about-title">
+  <section class="section" id="about" aria-labelledby="about-title">
     <div class="shell about-grid">
       <div>
         <h2 id="about-title" class="section-title">About Manifest Texas</h2>
         <p class="prose">
-          Creating unforgettable moments across Texas. Manifesting bold, original talent from every genre.
+          We create unforgettable live moments across Texas and showcase bold, original talent from every genre.
         </p>
       </div>
       <ul class="about-stats">
         <li><span class="stat-k">Cities</span><span class="stat-v">Austin · Dallas · San Antonio · Houston</span></li>
-        <li><span class="stat-k">Focus</span><span class="stat-v">Discovering standout talent and building collaborations that move artists forward. We partner with emerging and established musicians, record labels, and agencies to grow their presence across Texas. <a href="mailto:anthonyjones@manifesttexas.com?subject=Texas%20Promotion%20Collaboration">Email us</a> and let’s build momentum.</span></li>
-        <li><span class="stat-k">Production</span><span class="stat-v"><a href="mailto:anthonyjones@manifesttexas.com?subject=Production%20Inquiry">Email us</a> and we’ll link you with teams we trust.</span></li>
-        <li><span class="stat-k">Bookings</span><span class="stat-v">Touring + Texas local</span></li>
+        <li><span class="stat-k">Focus</span><span class="stat-v">Discovering standout talent and building collaborations that move artists forward. We partner with emerging and established musicians, record labels, and agencies to grow their presence across Texas. <a href="mailto:anthonyjones@manifesttexas.com?subject=Texas%20Promotion%20Collaboration">Email us</a>, and let’s build momentum.</span></li>
+        <li><span class="stat-k">Production</span><span class="stat-v"><a href="mailto:anthonyjones@manifesttexas.com?subject=Production%20Inquiry">Email us</a>, and we’ll connect you with teams we trust.</span></li>
+        <li><span class="stat-k">Bookings</span><span class="stat-v">Touring and local Texas artists</span></li>
       </ul>
     </div>
   </section>
@@ -425,11 +557,11 @@
   <!-- ============================================================
        FOCUS
        ============================================================ -->
-  <section class="section" id="focus" aria-labelledby="focus-title">
+  <section class="section section-alt" id="focus" aria-labelledby="focus-title">
     <div class="shell">
       <div class="section-head">
         <h2 id="focus-title" class="section-title">Focus</h2>
-        <p class="section-note">Finding unique talent and meaningful collaborations.</p>
+        <p class="section-note">Finding unique talent and building meaningful collaborations.</p>
       </div>
 
       <div class="sub-cta">
@@ -444,11 +576,11 @@
   <!-- ============================================================
        CONTACT — swap addresses and social handles here
        ============================================================ -->
-  <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+  <section class="section" id="contact" aria-labelledby="contact-title">
     <div class="shell">
       <div class="section-head">
         <h2 id="contact-title" class="section-title">Contact</h2>
-        <p class="section-note">Direct lines. We answer the ones that are specific.</p>
+        <p class="section-note">Reach us directly. The more specific your message, the faster we can help.</p>
       </div>
 
       <div class="contact-grid">
@@ -464,7 +596,7 @@
         </div>
         <div class="contact-card">
           <h3>Venues</h3>
-          <p>We’re here to co-promote with our community.</p>
+          <p>We love co-promoting with venues in our community.</p>
           <a href="mailto:anthonyjones@manifesttexas.com?subject=Venue%20Inquiry">Email us</a>
         </div>
         <div class="contact-card">
@@ -482,7 +614,9 @@
     <img src="assets/img/logo-manifest-texas-sm.png" width="400" height="150" alt="Manifest Texas" class="footer-logo" />
     <nav class="footer-nav" aria-label="Footer">
       <a href="#upcoming">Upcoming</a>
+      <a href="#videos">Videos</a>
       <a href="#tickets">Tickets</a>
+      <a href="#past">Past Shows</a>
       <a href="#production">Production</a>
       <a href="#about">About</a>
       <a href="#focus">Focus</a>
