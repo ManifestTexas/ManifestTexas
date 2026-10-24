@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,500&f[]=switzer@400,500,600,700&display=swap" />
-<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/styles.css?v=20261024" />
 
 <!-- ============================================================
      STRUCTURED DATA — Organization + announced events (past and upcoming).
@@ -149,7 +149,8 @@
     {
       "@type": "MusicEvent",
       "name": "Do Not Resurrect (Dallas)",
-      "startDate": "2026-11-01",
+      "startDate": "2026-11-01T18:00:00-06:00",
+      "doorTime": "2026-11-01T18:00:00-06:00",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "organizer": { "@type": "Organization", "name": "Manifest Texas" },
@@ -267,47 +268,6 @@
       </div>
 
       <div class="show-grid show-grid-upcoming">
-        <!-- Token — Dallas -->
-        <article class="show-card">
-          <figure class="flyer">
-            <picture>
-              <source srcset="assets/img/flyer-token-dallas.webp" type="image/webp" />
-              <img src="assets/img/flyer-token-dallas.jpg" width="1100" height="1699" loading="lazy"
-                   alt="Token, I’m Leaving Soon Tour — Club Dada, 2720 Elm St, Dallas, Texas. Doors 10 PM, 10.19.26. Presented by Manifest Texas." />
-            </picture>
-            <figcaption class="flyer-tag">Next up</figcaption>
-          </figure>
-          <div class="show-body">
-            <p class="eyebrow">Mon · Oct 19, 2026</p>
-            <h3 class="show-title show-title-sm">Token</h3>
-            <p class="show-support">I’m Leaving Soon Tour, with Clark D</p>
-            <p class="show-support">Club Dada · Dallas, Texas</p>
-            <div class="show-actions">
-              <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Token — Austin -->
-        <article class="show-card">
-          <figure class="flyer">
-            <picture>
-              <source srcset="assets/img/flyer-token-austin.webp" type="image/webp" />
-              <img src="assets/img/flyer-token-austin.jpg" width="1100" height="1699" loading="lazy"
-                   alt="Token, I’m Leaving Soon Tour — Come &amp; Take It Live, 2015 E Riverside Dr, Austin, Texas. Doors 10 PM, 10.20.26. Presented by Manifest Texas." />
-            </picture>
-          </figure>
-          <div class="show-body">
-            <p class="eyebrow">Tue · Oct 20, 2026</p>
-            <h3 class="show-title show-title-sm">Token</h3>
-            <p class="show-support">I’m Leaving Soon Tour, with Clark D</p>
-            <p class="show-support">Come &amp; Take It Live · Austin, Texas</p>
-            <div class="show-actions">
-              <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
-            </div>
-          </div>
-        </article>
-
         <!-- Do Not Resurrect — Dallas -->
         <article class="show-card">
           <figure class="flyer">
@@ -316,9 +276,10 @@
               <img src="assets/img/flyer-dnr.jpg" width="1100" height="1100" loading="lazy"
                    alt="Do Not Resurrect with 870glizzy, pranav.wav and mercykill, sounds by unordinarybeats — Dallas 11/1 at Club Dada (late), Houston 11/7 at Bad Astronaut." />
             </picture>
+            <figcaption class="flyer-tag">Next up</figcaption>
           </figure>
           <div class="show-body">
-            <p class="eyebrow">Sun · Nov 1, 2026 · Late show</p>
+            <p class="eyebrow">Sun · Nov 1, 2026 · Doors 6 PM</p>
             <h3 class="show-title show-title-sm">Do Not Resurrect</h3>
             <p class="show-support">870glizzy · pranav.wav · mercykill<br />Sounds by unordinarybeats</p>
             <p class="show-support">Club Dada · Dallas, Texas</p>
@@ -339,47 +300,32 @@
     <div class="promo-glow" aria-hidden="true"></div>
     <div class="shell promo-layout">
       <div class="promo-intro">
-        <p class="eyebrow">Promo videos</p>
-        <h2 id="videos-title" class="section-title promo-title">Token: I’m Leaving Soon Tour</h2>
-        <p class="section-note">Two Texas nights with Token and Clark D. Press play, then grab your tickets before they’re gone.</p>
+        <p class="eyebrow">Promo video</p>
+        <h2 id="videos-title" class="section-title promo-title">Do Not Resurrect</h2>
+        <p class="section-note">870glizzy, pranav.wav, and mercykill, with sounds by unordinarybeats. Press play, then grab your tickets before they’re gone.</p>
         <ul class="promo-dates">
-          <li><span class="pd-date">Oct 19</span><span class="pd-city">Dallas · Club Dada</span></li>
-          <li><span class="pd-date">Oct 20</span><span class="pd-city">Austin · Come &amp; Take It Live</span></li>
+          <li><span class="pd-date">Nov 1</span><span class="pd-city">Dallas · Club Dada · Doors 6 PM</span></li>
         </ul>
+        <div class="promo-cta">
+          <a class="btn btn-primary" href="https://link.dice.fm/ke7046bc9ee0" target="_blank" rel="noopener noreferrer">Get tickets</a>
+        </div>
       </div>
 
-      <div class="promo-grid">
+      <div class="promo-grid promo-grid-single">
         <figure class="promo">
           <div class="promo-frame">
             <video class="promo-video" preload="none" playsinline controls
-                   poster="assets/img/token-dallas-promo-poster.jpg"
-                   aria-label="Token, I’m Leaving Soon Tour — Dallas promo video">
-              <source src="assets/video/token-dallas-promo.mp4" type="video/mp4" />
+                   poster="assets/img/do-not-resurrect-promo-poster.jpg"
+                   aria-label="Do Not Resurrect — Club Dada, Dallas, November 1 promo video">
+              <source src="assets/video/do-not-resurrect-promo.mp4" type="video/mp4" />
             </video>
-            <button class="promo-play" type="button" aria-label="Play Dallas promo video">
+            <button class="promo-play" type="button" aria-label="Play Do Not Resurrect promo video">
               <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
             </button>
           </div>
           <figcaption class="promo-cap">
-            <span><strong>Dallas</strong> · Mon, Oct 19</span>
-            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
-          </figcaption>
-        </figure>
-
-        <figure class="promo">
-          <div class="promo-frame">
-            <video class="promo-video" preload="none" playsinline controls
-                   poster="assets/img/token-austin-promo-poster.jpg"
-                   aria-label="Token, I’m Leaving Soon Tour — Austin promo video">
-              <source src="assets/video/token-austin-promo.mp4" type="video/mp4" />
-            </video>
-            <button class="promo-play" type="button" aria-label="Play Austin promo video">
-              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
-            </button>
-          </div>
-          <figcaption class="promo-cap">
-            <span><strong>Austin</strong> · Tue, Oct 20</span>
-            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
+            <span><strong>Dallas</strong> · Sun, Nov 1</span>
+            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/ke7046bc9ee0" target="_blank" rel="noopener noreferrer">Tickets</a>
           </figcaption>
         </figure>
       </div>
@@ -400,32 +346,10 @@
       <div class="link-rows">
 
         <div class="link-row">
-          <div class="link-row-date"><span class="lr-mon">Oct</span><span class="lr-day">19</span><span class="lr-yr">2026</span></div>
-          <div class="link-row-main">
-            <h3 class="link-row-title">Token: I’m Leaving Soon Tour</h3>
-            <p class="link-row-sub">with Clark D · Club Dada · Dallas, Texas · Doors 10 PM</p>
-          </div>
-          <div class="link-row-actions">
-            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/j30465cda630" target="_blank" rel="noopener noreferrer">Tickets</a>
-          </div>
-        </div>
-
-        <div class="link-row">
-          <div class="link-row-date"><span class="lr-mon">Oct</span><span class="lr-day">20</span><span class="lr-yr">2026</span></div>
-          <div class="link-row-main">
-            <h3 class="link-row-title">Token: I’m Leaving Soon Tour</h3>
-            <p class="link-row-sub">with Clark D · Come &amp; Take It Live · Austin, Texas · Doors 10 PM</p>
-          </div>
-          <div class="link-row-actions">
-            <a class="btn btn-primary btn-sm" href="https://link.dice.fm/Jeaab962a720" target="_blank" rel="noopener noreferrer">Tickets</a>
-          </div>
-        </div>
-
-        <div class="link-row">
           <div class="link-row-date"><span class="lr-mon">Nov</span><span class="lr-day">01</span><span class="lr-yr">2026</span></div>
           <div class="link-row-main">
             <h3 class="link-row-title">Do Not Resurrect</h3>
-            <p class="link-row-sub">870glizzy · pranav.wav · mercykill · Club Dada · Dallas, Texas · Late show</p>
+            <p class="link-row-sub">870glizzy · pranav.wav · mercykill · Club Dada · Dallas, Texas · Doors 6 PM</p>
           </div>
           <div class="link-row-actions">
             <a class="btn btn-primary btn-sm" href="https://link.dice.fm/ke7046bc9ee0" target="_blank" rel="noopener noreferrer">Tickets</a>
@@ -489,6 +413,36 @@
       <h3 class="recap-heading">Show Archive</h3>
 
       <ul class="past-grid">
+        <li class="past-card">
+          <figure class="flyer past-flyer">
+            <picture>
+              <source srcset="assets/img/flyer-token-austin-thumb.webp" type="image/webp" />
+              <img src="assets/img/flyer-token-austin-thumb.jpg" width="520" height="803" loading="lazy"
+                   alt="Token, I’m Leaving Soon Tour — Come &amp; Take It Live, 2015 E Riverside Dr, Austin, Texas, 10.20.26. Presented by Manifest Texas." />
+            </picture>
+          </figure>
+          <div class="past-body">
+            <p class="past-date">Tue · Oct 20, 2026</p>
+            <h3 class="past-title">Token</h3>
+            <p class="past-sub">I’m Leaving Soon Tour, with Clark&nbsp;D</p>
+            <p class="past-sub">Come &amp; Take It Live · Austin, Texas</p>
+          </div>
+        </li>
+        <li class="past-card">
+          <figure class="flyer past-flyer">
+            <picture>
+              <source srcset="assets/img/flyer-token-dallas-thumb.webp" type="image/webp" />
+              <img src="assets/img/flyer-token-dallas-thumb.jpg" width="520" height="803" loading="lazy"
+                   alt="Token, I’m Leaving Soon Tour — Club Dada, 2720 Elm St, Dallas, Texas, 10.19.26. Presented by Manifest Texas." />
+            </picture>
+          </figure>
+          <div class="past-body">
+            <p class="past-date">Mon · Oct 19, 2026</p>
+            <h3 class="past-title">Token</h3>
+            <p class="past-sub">I’m Leaving Soon Tour, with Clark&nbsp;D</p>
+            <p class="past-sub">Club Dada · Dallas, Texas</p>
+          </div>
+        </li>
         <li class="past-card">
           <figure class="flyer past-flyer">
             <picture>

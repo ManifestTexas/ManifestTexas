@@ -374,6 +374,9 @@ a.btn[data-link-needed] { cursor: default; }
 .promo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(var(--space-4), 3vw, var(--space-8)); }
 .promo { margin: 0; }
 .promo-grid .promo:nth-child(2) { transform: translateY(var(--space-10)); }
+/* One promo at a time: keep the vertical video centered at a phone-like width */
+.promo-grid.promo-grid-single { grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 380px; justify-self: center; margin-inline: auto; }
+.promo-cta { margin-top: var(--space-8); }
 .promo-frame {
   position: relative; aspect-ratio: 9 / 16; overflow: hidden;
   border-radius: 22px; background: #000;
