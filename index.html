@@ -30,7 +30,7 @@
 <link rel="preload" href="assets/fonts/big-shoulders-display.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="assets/fonts/archivo.woff" as="font" type="font/woff" crossorigin />
 <!-- Bump the ?v= number whenever site.css or site.js changes (assets are cached for a year). -->
-<link rel="stylesheet" href="assets/css/site.css?v=20261102" />
+<link rel="stylesheet" href="assets/css/site.css?v=20261102b" />
 
 <!-- ============================================================
      STRUCTURED DATA: organization + every show (next and past).
@@ -308,11 +308,24 @@
 
         <div class="presenters">
           <h2 class="presenters-label">Presented by</h2>
-          <picture>
-            <source srcset="assets/img/underground-sounds-partners.webp" type="image/webp" />
-            <img src="assets/img/underground-sounds-partners.png" width="939" height="150" loading="lazy"
-                 alt="PA, NiteLyfe Promotions, VIDAL, and Manifest Texas" />
-          </picture>
+          <ul class="presenters-logos">
+            <li class="logo-pa"><picture>
+              <source srcset="assets/img/partner-pa.webp" type="image/webp" />
+              <img src="assets/img/partner-pa.png" width="261" height="240" loading="lazy" alt="PA" />
+            </picture></li>
+            <li class="logo-nitelyfe"><picture>
+              <source srcset="assets/img/partner-nitelyfe.webp" type="image/webp" />
+              <img src="assets/img/partner-nitelyfe.png" width="238" height="240" loading="lazy" alt="NiteLyfe Promotions" />
+            </picture></li>
+            <li class="logo-vidal"><picture>
+              <source srcset="assets/img/partner-vidal.webp" type="image/webp" />
+              <img src="assets/img/partner-vidal.png" width="383" height="240" loading="lazy" alt="VIDAL" />
+            </picture></li>
+            <li class="logo-manifest"><picture>
+              <source srcset="assets/img/partner-manifest-texas.webp" type="image/webp" />
+              <img src="assets/img/partner-manifest-texas.png" width="589" height="240" loading="lazy" alt="Manifest Texas" />
+            </picture></li>
+          </ul>
         </div>
       </div>
 

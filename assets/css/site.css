@@ -275,7 +275,17 @@ button { font: inherit; color: inherit; }
 }
 
 .presenters { margin-top: 2.5rem; }
-.presenters img { margin: .9rem auto 0; width: min(100%, 440px); opacity: .92; }
+.presenters-logos {
+  --logo-h: clamp(36px, 10.5vw, 72px);
+  list-style: none; margin: 1.1rem auto 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 1rem clamp(14px, 3.2vw, 40px);
+}
+.presenters-logos li { display: flex; }
+.presenters-logos img { display: block; height: var(--logo-h); width: auto; }
+/* optical balance: round badge reads smaller, wide wordmark reads bigger */
+.presenters-logos .logo-nitelyfe img { height: calc(var(--logo-h) * 1.1); }
+.presenters-logos .logo-vidal img { height: calc(var(--logo-h) * .82); }
 
 /* 7 — PAST SHOWS ========================================================== */
 .past { padding-block: var(--section); border-top: 1px solid rgba(255,255,255,.08); }
