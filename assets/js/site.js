@@ -106,6 +106,17 @@
     }
   }
 
+  /* 4b — Upcoming cards wrap themselves too ------------------------------
+     Each card has its own data-show-ends. After it passes, that card's
+     ticket button hides and its "that's a wrap" note shows. */
+  document.querySelectorAll('[data-show-ends]').forEach(function (card) {
+    var done = Date.parse(card.getAttribute('data-show-ends'));
+    if (isNaN(done) || Date.now() <= done) return;
+    card.querySelectorAll('[data-ticket]').forEach(function (el) { el.hidden = true; });
+    var note = card.querySelector('[data-show-wrapped]');
+    if (note) note.hidden = false;
+  });
+
   /* 5 — Viewer: full-size flyers and promo/recap videos ------------------ */
   var viewer = document.querySelector('[data-viewer]');
   var stage = document.querySelector('[data-viewer-stage]');

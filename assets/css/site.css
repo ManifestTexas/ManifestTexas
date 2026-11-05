@@ -287,6 +287,42 @@ button { font: inherit; color: inherit; }
 .presenters-logos .logo-nitelyfe img { height: calc(var(--logo-h) * 1.1); }
 .presenters-logos .logo-vidal img { height: calc(var(--logo-h) * .82); }
 
+/* 6b — UPCOMING =========================================================== */
+.upcoming { padding-block: var(--section); border-top: 1px solid rgba(255,255,255,.08); }
+.up-card {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  padding: clamp(1.25rem, .8rem + 2vw, 2.75rem);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  background:
+    radial-gradient(60% 70% at 85% 15%, color-mix(in srgb, var(--show-glow) 50%, transparent), transparent 70%),
+    radial-gradient(50% 50% at 10% 95%, color-mix(in srgb, var(--show-glow) 25%, transparent), transparent 70%),
+    #050806;
+}
+.up-flyer { box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 40px 80px -30px color-mix(in srgb, var(--show-glow) 70%, #000); }
+.up-info { text-align: center; }
+.up-kicker { color: var(--steel); font-weight: 550; letter-spacing: .02em; }
+.up-title {
+  margin-top: .3rem;
+  font-family: var(--display); font-weight: 900; text-transform: uppercase;
+  font-size: var(--step-hero); line-height: .84; letter-spacing: .01em;
+  color: var(--show-accent);
+}
+.up-blurb { margin: 1rem auto 0; max-width: 40ch; color: var(--chrome); }
+.up-facts { margin-top: 1.5rem; display: grid; gap: .1rem; }
+.up-cta { margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.up-note { margin-top: .75rem; color: var(--steel); font-size: var(--step--1); }
+.up-wrapped { margin: 1rem auto 0; max-width: 42ch; }
+.up-details {
+  margin: 1.75rem auto 0; max-width: 46ch; display: grid; gap: .45rem;
+  color: var(--steel); font-size: var(--step--1); line-height: 1.45;
+}
+.up-details li + li { padding-top: .45rem; border-top: 1px solid rgba(255,255,255,.08); }
+[data-ticket][hidden] { display: none !important; }
+
 /* 7 — PAST SHOWS ========================================================== */
 .past { padding-block: var(--section); border-top: 1px solid rgba(255,255,255,.08); }
 
@@ -416,6 +452,8 @@ button { font: inherit; color: inherit; }
   }
   .next-reel { justify-self: center; }
   .reel-frame { width: min(78vw, 340px); }
+  .up-card { grid-template-columns: 1fr; }
+  .up-flyer { width: min(100%, 420px); justify-self: center; }
 }
 
 @media (max-width: 560px) {
