@@ -20,7 +20,7 @@ This folder is ready to deploy as a static website. No build command or framewor
 
 1. In Vercel, open the deployed project.
 2. Open **Settings → Domains**.
-3. Add `manifesttexas.com`, then also add `www.manifesttexas.com`.
+3. Add `manifesttexas.com`, then also add `www.manifesttexas.com` set to redirect (308) to `manifesttexas.com`.
 4. Vercel will show the DNS records it needs.
 5. In Squarespace, open the Domains dashboard, select the domain, then open **DNS**.
 6. Replace only the website-hosting A/CNAME records with the values Vercel provides.
