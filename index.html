@@ -30,7 +30,7 @@
 <link rel="preload" href="assets/fonts/big-shoulders-display.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="assets/fonts/archivo.woff" as="font" type="font/woff" crossorigin />
 <!-- Bump the ?v= number whenever site.css or site.js changes (assets are cached for a year). -->
-<link rel="stylesheet" href="assets/css/site.css?v=20261105a" />
+<link rel="stylesheet" href="assets/css/site.css?v=20261107a" />
 
 <!-- ============================================================
      STRUCTURED DATA: organization + every show (next and past).
@@ -123,6 +123,35 @@
         "price": "0",
         "priceCurrency": "USD",
         "url": "https://www.partypass.vip/events/60",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "MusicEvent",
+      "name": "NiteLyfe Promotions & Manifest Texas present DANNY",
+      "description": "DANNY live at Vulcan Gas Co. in Austin, with 531.am, LOLA, and Smooth.",
+      "startDate": "2026-12-19",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "organizer": [
+        { "@id": "https://www.manifesttexas.com/#org" },
+        { "@type": "Organization", "name": "NiteLyfe Promotions" }
+      ],
+      "performer": [
+        { "@type": "MusicGroup", "name": "DANNY" },
+        { "@type": "MusicGroup", "name": "531.am" },
+        { "@type": "MusicGroup", "name": "LOLA" },
+        { "@type": "MusicGroup", "name": "Smooth" }
+      ],
+      "location": {
+        "@type": "MusicVenue",
+        "name": "Vulcan Gas Co.",
+        "address": { "@type": "PostalAddress", "streetAddress": "418 E 6th St", "addressLocality": "Austin", "addressRegion": "TX", "postalCode": "78701", "addressCountry": "US" }
+      },
+      "image": "https://www.manifesttexas.com/assets/img/flyer-danny-vulcan.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.partypass.vip/events/58",
         "availability": "https://schema.org/InStock"
       }
     },
@@ -429,6 +458,68 @@
             <li>Open decks</li>
             <li>Sound by Little Sounds</li>
             <li>Limited parking, rideshare encouraged</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- DANNY: Vulcan Gas Co.
+           This card puts the flyer and promo side by side with the ticket button under them. -->
+      <article class="up-card up-card-pair" data-show-ends="2026-12-20T02:00:00-06:00"
+               style="--show-accent:#ff5468; --show-ink:#16040b; --show-glow:#2333d8;">
+        <div class="up-media">
+          <div class="up-pair">
+            <button class="flyer-btn up-flyer" type="button" style="--ar:0.8"
+                    data-flyer="assets/img/flyer-danny-vulcan.jpg" data-flyer-w="1100" data-flyer-h="1375"
+                    aria-label="View the DANNY flyer full size">
+              <picture>
+                <source type="image/webp" srcset="assets/img/flyer-danny-vulcan-thumb.webp 520w, assets/img/flyer-danny-vulcan.webp 1100w" sizes="(min-width: 820px) 330px, 58vw" />
+                <img src="assets/img/flyer-danny-vulcan-thumb.jpg" width="520" height="650" loading="lazy"
+                     alt="NiteLyfe Promotions and Manifest Texas present DANNY. Saturday, 12.19.26, Vulcan Gas Co., 418 E 6th St, Austin, TX. With 531.am, LOLA, and Smooth." />
+              </picture>
+            </button>
+            <button class="promo-tile" type="button" style="--ar:0.5625"
+                    data-video="assets/video/danny-vulcan-promo.mp4" data-poster="assets/img/danny-vulcan-promo-poster.jpg" data-shape="tall"
+                    data-title="DANNY promo" aria-label="Play the DANNY promo video">
+              <picture>
+                <source type="image/webp" srcset="assets/img/danny-vulcan-promo-poster.webp" />
+                <img src="assets/img/danny-vulcan-promo-poster.jpg" width="720" height="1280" loading="lazy" alt="" />
+              </picture>
+              <span class="promo-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+              </span>
+              <span class="promo-label" aria-hidden="true">Watch promo</span>
+            </button>
+          </div>
+
+          <div class="up-cta">
+            <a class="btn btn-show btn-lg" data-ticket href="https://www.partypass.vip/events/58" target="_blank" rel="noopener">Get tickets</a>
+          </div>
+          <p class="up-note" data-ticket>Tickets on PartyPass.</p>
+          <p class="up-wrapped" data-show-wrapped hidden>That one’s a wrap. Thanks to everyone who came out.</p>
+        </div>
+
+        <div class="up-info">
+          <p class="up-kicker">NiteLyfe Promotions &amp; Manifest Texas present</p>
+          <h3 class="up-title">DANNY</h3>
+          <p class="up-blurb">DJ and producer DANNY brings his set to Vulcan Gas Co. on East 6th Street.</p>
+
+          <dl class="up-facts">
+            <div>
+              <dt class="sr-only">Date</dt>
+              <dd class="fact-big">Saturday, Dec 19</dd>
+            </div>
+            <div class="fact-venue">
+              <dt class="sr-only">Venue</dt>
+              <dd>
+                <strong>Vulcan Gas Co.</strong><br />
+                418 E 6th St, Austin, TX<br />
+                <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Vulcan+Gas+Company+418+E+6th+St+Austin+TX" target="_blank" rel="noopener">Get directions</a>
+              </dd>
+            </div>
+          </dl>
+
+          <ul class="up-details">
+            <li>With 531.am, LOLA, and Smooth</li>
           </ul>
         </div>
       </article>
