@@ -30,7 +30,7 @@
 <link rel="preload" href="assets/fonts/big-shoulders-display.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="assets/fonts/archivo.woff" as="font" type="font/woff" crossorigin />
 <!-- Bump the ?v= number whenever site.css or site.js changes (assets are cached for a year). -->
-<link rel="stylesheet" href="assets/css/site.css?v=20261107a" />
+<link rel="stylesheet" href="assets/css/site.css?v=20261111a" />
 
 <!-- ============================================================
      STRUCTURED DATA: organization + every show (next and past).
@@ -50,6 +50,14 @@
       "logo": "https://manifesttexas.com/assets/img/logo-manifest-texas.png",
       "email": "anthonyjones@manifesttexas.com",
       "sameAs": ["https://www.instagram.com/manifesttexas"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://manifesttexas.com/#agency",
+      "name": "The Standard Agent",
+      "description": "Boutique booking agency representing TRYPT and 4Scythe.",
+      "url": "https://manifesttexas.com/#agency",
+      "email": "anthonyjones@manifesttexas.com"
     },
     {
       "@type": "MusicEvent",
@@ -285,6 +293,7 @@
       <a href="#next">Next show</a>
       <a href="#upcoming">Upcoming</a>
       <a href="#past">Past shows</a>
+      <a href="#agency">Agency</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -303,6 +312,7 @@
     <a href="#next">Next show</a>
     <a href="#upcoming">Upcoming</a>
     <a href="#past">Past shows</a>
+    <a href="#agency">Agency</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -748,6 +758,61 @@
           <span>TARK</span> <span>TC</span> <span>Vivid&nbsp;Fever&nbsp;Dreams</span>
         </p>
       </div>
+
+      <!-- Earlier bookings under UFO Project X (2020–2025). Add names to this list. -->
+      <div class="played played-sub">
+        <h3 class="played-label">Booked with UFO Project X, 2020–2025</h3>
+        <p class="played-names played-names-sm">
+          <span>Culture&nbsp;Shock</span> <span>1991</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AGENCY: The Standard Agent, our boutique booking agency.
+       To add an artist: copy one <article class="roster-card"> block.
+       --show-accent / --show-glow on each card set its colors.
+       ============================================================ -->
+  <section class="agency" id="agency" aria-labelledby="agency-title">
+    <div class="shell">
+      <header class="section-head agency-head">
+        <p class="agency-kicker">Our boutique booking agency</p>
+        <h2 id="agency-title" class="section-title">The Standard Agent</h2>
+        <p class="section-sub">A small, hand-picked roster. We book our artists across Texas and the US, routed with the venues and promoters we work with every week.</p>
+      </header>
+
+      <div class="roster">
+        <!-- TRYPT -->
+        <article class="roster-card" style="--show-accent:#b9f45c; --show-ink:#101a04; --show-glow:#3b1f7a;">
+          <p class="roster-genre">Dubstep · Toronto</p>
+          <h3 class="roster-name">TRYPT</h3>
+          <ul class="roster-wins">
+            <li>New EP <cite>DUPPY</cite> out on Circus Records, the label founded by Flux Pavilion and Doctor&nbsp;P</li>
+            <li>Early co-sign from Skrillex, who backed his remix of “All I Ask of You”</li>
+            <li>Has shared bills with Nero, Zeds Dead, and Adventure Club</li>
+          </ul>
+          <div class="roster-cta">
+            <a class="btn btn-show btn-sm" href="mailto:anthonyjones@manifesttexas.com?subject=Booking%20TRYPT">Book TRYPT</a>
+            <a class="btn btn-ghost btn-sm" href="https://edm.com/music-releases/trypt-duppy-ep-circus-records/" target="_blank" rel="noopener">Read the EDM.com feature</a>
+          </div>
+        </article>
+
+        <!-- 4Scythe -->
+        <article class="roster-card" style="--show-accent:#ff4b5c; --show-ink:#1a0306; --show-glow:#5a0e1c;">
+          <p class="roster-genre">Rap · Hip-hop and trap</p>
+          <h3 class="roster-name">4Scythe</h3>
+          <ul class="roster-wins">
+            <li>Three-volume <cite>Genesis of a Black Rose</cite> series, 2022 to 2025</li>
+            <li>Three more projects in 2025: <cite>The Divine Comedy, Inferno</cite>, <cite>Perception</cite>, and <cite>All I’ve Ever Known Is Detriment</cite></li>
+            <li>New single “WAY TOO HIGH” out in 2026</li>
+          </ul>
+          <div class="roster-cta">
+            <a class="btn btn-show btn-sm" href="mailto:anthonyjones@manifesttexas.com?subject=Booking%204Scythe">Book 4Scythe</a>
+            <a class="btn btn-ghost btn-sm" href="https://soundcloud.com/scythe_music" target="_blank" rel="noopener">Listen on SoundCloud</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -772,6 +837,10 @@
           <div>
             <dt>Bookings</dt>
             <dd>Touring and Texas artists. Send offers, holds, and routing.</dd>
+          </div>
+          <div>
+            <dt>Artist representation</dt>
+            <dd>Through The Standard Agent, our boutique agency, representing TRYPT and 4Scythe.</dd>
           </div>
           <div>
             <dt>Venues and promoters</dt>
@@ -806,6 +875,7 @@
       <a href="#next">Next show</a>
       <a href="#upcoming">Upcoming</a>
       <a href="#past">Past shows</a>
+      <a href="#agency">Agency</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>

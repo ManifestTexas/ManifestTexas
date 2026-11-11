@@ -398,6 +398,34 @@ button { font: inherit; color: inherit; }
 .played-names span:nth-child(odd) { color: var(--chrome); }
 .played-names span:nth-child(even) { color: #7d8791; }
 
+/* 7b — AGENCY (The Standard Agent) ======================================== */
+.agency { padding-block: var(--section); border-top: 1px solid rgba(255,255,255,.08); }
+.agency-head { display: grid; justify-items: center; text-align: center; }
+.agency-kicker { margin-bottom: .5rem; color: var(--steel); font-weight: 550; letter-spacing: .02em; }
+.agency .section-sub { margin-inline: auto; }
+.roster { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, .8rem + 2vw, 2.5rem); }
+.roster-card {
+  display: grid; align-content: start; justify-items: center; text-align: center;
+  padding: clamp(1.5rem, 1rem + 2vw, 3rem);
+  border: 1px solid rgba(255,255,255,.1); border-radius: 24px;
+  background:
+    radial-gradient(70% 60% at 50% 0%, color-mix(in srgb, var(--show-glow) 55%, transparent), transparent 70%),
+    #050806;
+}
+.roster-genre { color: var(--steel); font-size: var(--step--1); font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+.roster-name {
+  margin-top: .35rem;
+  font-family: var(--display); font-weight: 900; text-transform: uppercase;
+  font-size: var(--step-hero); line-height: .84; letter-spacing: .01em;
+  color: var(--show-accent);
+}
+.roster-wins { margin: 1.5rem auto 0; max-width: 42ch; display: grid; gap: .6rem; line-height: 1.45; }
+.roster-wins li + li { padding-top: .6rem; border-top: 1px solid rgba(255,255,255,.08); }
+.roster-wins cite { font-style: italic; }
+.roster-cta { margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
+.played-sub { margin-top: clamp(2.5rem, 2rem + 2vw, 3.75rem); }
+.played-names-sm { font-size: var(--step-2); }
+
 /* 8 — ABOUT =============================================================== */
 .about { padding-block: var(--section); background: var(--graphite); }
 .about-mark { text-align: center; }
@@ -484,6 +512,7 @@ button { font: inherit; color: inherit; }
   .up-card-pair { grid-template-columns: 1fr; }
   .up-media { width: min(100%, 560px); justify-self: center; }
   .up-pair .up-flyer { width: 100%; }
+  .roster { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 400px) {
