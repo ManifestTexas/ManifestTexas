@@ -287,6 +287,13 @@ button { font: inherit; color: inherit; }
 .presenters-logos .logo-nitelyfe img { height: calc(var(--logo-h) * 1.1); }
 .presenters-logos .logo-vidal img { height: calc(var(--logo-h) * .82); }
 
+/* blurb + flyer, for a next show without stages or a lineup */
+.next-blurb { margin: 0 auto; max-width: 42ch; color: var(--chrome); font-size: var(--step-1); line-height: 1.45; }
+.flyer-btn.next-flyer {
+  width: min(100%, 360px); margin: 2.5rem auto 0;
+  box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 40px 80px -30px color-mix(in srgb, var(--show-glow) 70%, #000);
+}
+
 /* 6b — UPCOMING =========================================================== */
 .upcoming { padding-block: var(--section); border-top: 1px solid rgba(255,255,255,.08); }
 .up-card {
