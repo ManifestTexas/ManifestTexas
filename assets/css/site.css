@@ -541,3 +541,9 @@ button { font: inherit; color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
 }
+
+/* 4:5 motion flyers in the next-show reel (default reel is 9:16) */
+.reel-frame.is-45 { aspect-ratio: 4 / 5; width: clamp(300px, 32vw, 440px); }
+@media (max-width: 820px) {
+  .reel-frame.is-45 { width: min(86vw, 420px); }
+}
